@@ -592,8 +592,8 @@ canvas_h = 72*4
 saved_emoji_cloud_name = 'emoji_cloud_ellipse'
 plot_ellipse_canvas(canvas_w, canvas_h, path_img_raw, path_img_resize, path_img_within_bb, path_emoji_cloud, saved_emoji_cloud_name, dict_weight, thold_alpha_bb)
 
-
-
-
 # add some comments 
+# need to be able to process different emoji designs 
+
+
 
