@@ -566,6 +566,9 @@ for index, img_name in enumerate(list_img):
     weight = (index + 1) / 10 + 1
     dict_weight[img_name] = weight
 
+# area weight 
+dict_area_weight = {}
+
 #############################
 # canvas settings 
 #############################
