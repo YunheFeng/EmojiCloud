@@ -50,6 +50,13 @@ canvas_h = 72*4
 saved_emoji_cloud_name = 'emoji_cloud_ellipse.png'
 EmojiCloud.plot_ellipse_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, saved_emoji_cloud_name)
 ```
+
+<p float="left">
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_masked.png" height="100" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_rectangle.png" height="100" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_ellipse.png" height="100" />
+</p>
+
 * **Plot different vendors**
 ```Python 
 from EmojiCloud import EmojiCloud
@@ -66,6 +73,18 @@ for emoji_vendor in list_vendor:
     saved_emoji_cloud_name = 'emoji_cloud_circle_' + emoji_vendor + '.png'
     EmojiCloud.plot_ellipse_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, saved_emoji_cloud_name)
 ```
+
+<p float="left">
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Google.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Windows.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Apple.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Twitter.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Meta.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_JoyPixels.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Samsung.png" height="140" />
+</p>
+
+
 * **Plot customized emojis**
 ```Python 
 from EmojiCloud import EmojiCloud
@@ -87,6 +106,12 @@ saved_emoji_cloud_name = 'emoji_cloud_original.png'
 EmojiCloud.plot_rectangle_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, saved_emoji_cloud_name, dict_customized, canvas_color)
 ```
 
+<p float="left">
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_original.png" height="100" />
+</p>
+
+**All the above testing scripts and data are available at https://github.com/YunheFeng/EmojiCloud/tree/main/tests.**
+
 ## Authors
 
 Contributors names and contact info
@@ -99,4 +124,4 @@ See the LICENSE.md file for details
 
 ## Paper
 
-Our paper has been accepted at the 5th International Workshop on Emoji Understanding and Applications in Social Media ([EMOJI@NAACL 2022](https://aiisc.ai/emoji2022/)). More information will be available soon. 
+Our [paper](https://yunhefeng.me/material/EmojiCloud.pdf) has been accepted at the 5th International Workshop on Emoji Understanding and Applications in Social Media ([EMOJI@NAACL 2022](https://aiisc.ai/emoji2022/)). Online EmojiCloud services will be available soon at [www.emojicloud.org](www.emojicloud.org). 
