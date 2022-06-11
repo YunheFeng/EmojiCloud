@@ -134,8 +134,6 @@ EmojiCloud.plot_ellipse_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, sa
 </p>
 
 
-=======
->>>>>>> 503c6f51b7aee72ee0add57c5e913507d6c27061
 **All the above testing scripts and data are available at https://github.com/YunheFeng/EmojiCloud/tree/main/tests.**
 
 ## Authors
@@ -151,7 +149,6 @@ See the LICENSE.md file for details
 ## Paper
 
 Our [paper](https://yunhefeng.me/material/EmojiCloud.pdf) has been accepted at the 5th International Workshop on Emoji Understanding and Applications in Social Media ([EMOJI@NAACL 2022](https://aiisc.ai/emoji2022/)). Online EmojiCloud services will be available soon at [www.emojicloud.org](www.emojicloud.org). 
-<<<<<<< HEAD
 
 ## Citations
 
@@ -163,5 +160,4 @@ Our [paper](https://yunhefeng.me/material/EmojiCloud.pdf) has been accepted at t
   year={2022}
 }
 ```
-=======
->>>>>>> 503c6f51b7aee72ee0add57c5e913507d6c27061
+
