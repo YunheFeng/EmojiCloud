@@ -121,7 +121,9 @@ def resize_img_based_weight(im_read, weight):
         im_resize (2D list): the image in 2D array with each cell of RGBA: the image width
     """    
     width, height = im_read.getdata().size
-    im_resize = im_read.resize((int(width*weight), int(height*weight)), Image.ANTIALIAS)
+    width_resize = int(width*weight) if int(width*weight) > 0 else 1
+    height_resize = int(height*weight) if int(height*weight) > 0 else 1
+    im_resize = im_read.resize((width_resize, height_resize), Image.ANTIALIAS)
     return im_resize
 
 def check_point_within_ellipse(center_x, center_y, x, y, radius_x, radius_y):
@@ -311,18 +313,26 @@ def rename_emoji_image_in_unicode(dict_weight):
     """rename emoji image name in unicode 
 
     Args:
-        dict_weight (dict): key: emoji image name in unicode, value: emoji weight 
+        dict_weight (dict): key: emoji by unicode or codepoint, value: emoji weight 
 
     Returns:
-        dict_rename (dict): key: renamed emoji image in unicode, value: emoji weight 
+        dict_rename (dict): key: renamed emoji image by codepoint, value: emoji weight 
     """
     dict_rename = {}
     for im_name in dict_weight:
-        im_rename = im_name.upper()
-        if '.PNG' not in im_rename:
-            im_rename += '.PNG'
-        if 'U+' not in im_rename:
-            im_rename = 'U+' + '-U+'.join(im_rename.split('-'))
+        # replace ',' and ' '
+        im_name_proc = im_name.replace(',','-')
+        im_name_proc = im_name_proc.replace(' ','')
+        # emoji by unicode
+        if not im_name_proc.replace('-','').isalnum():
+            im_rename = 'U+' + '-U+'.join('{:X}'.format(ord(_)) for _ in im_name_proc) + '.PNG'
+        # emoji by codepoint
+        else:
+            im_rename = im_name_proc.upper()
+            if '.PNG' not in im_rename:
+                im_rename += '.PNG'
+            if 'U+' not in im_rename:
+                im_rename = 'U+' + '-U+'.join(im_rename.split('-'))
         dict_rename[im_rename] = dict_weight[im_name]
     return dict_rename
 

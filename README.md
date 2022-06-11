@@ -50,6 +50,13 @@ canvas_h = 72*4
 saved_emoji_cloud_name = 'emoji_cloud_ellipse.png'
 EmojiCloud.plot_ellipse_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, saved_emoji_cloud_name)
 ```
+
+<p float="left">
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_masked.png" height="100" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_rectangle.png" height="100" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_ellipse.png" height="100" />
+</p>
+
 * **Plot different vendors**
 ```Python 
 from EmojiCloud import EmojiCloud
@@ -66,6 +73,18 @@ for emoji_vendor in list_vendor:
     saved_emoji_cloud_name = 'emoji_cloud_circle_' + emoji_vendor + '.png'
     EmojiCloud.plot_ellipse_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, saved_emoji_cloud_name)
 ```
+
+<p float="left">
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Google.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Windows.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Apple.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Twitter.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Meta.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_JoyPixels.png" height="140" />
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle_Samsung.png" height="140" />
+</p>
+
+
 * **Plot customized emojis**
 ```Python 
 from EmojiCloud import EmojiCloud
@@ -87,6 +106,35 @@ saved_emoji_cloud_name = 'emoji_cloud_original.png'
 EmojiCloud.plot_rectangle_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, saved_emoji_cloud_name, dict_customized, canvas_color)
 ```
 
+<p float="left">
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_original.png" height="100" />
+</p>
+
+
+* **Plot customized emojis**
+```Python 
+from EmojiCloud import EmojiCloud
+
+# set emoji weights by a dict with key: emoji by unicode, value: weight
+dict_weight = {'🇦🇨': 1.1, '💧': 1.2, '😂': 1.3, '🛴': 1.4, '🛵': 1.5, '🛶': 1.6, '🛷': 1.7, '🛸': 1.8, '🛹': 1.9, '🛺': 2.0, '😜': 2.1, '🍉': 2.2, '🟠': 2.3, '🦢': 2.4, '🦄': 2.5, '🕊': 2.6, '🦥': 2.7, '🦦': 2.8, '🦨': 2.9, '🦩': 3.0}
+
+# emoji vendor 
+emoji_vendor = 'Google'
+
+# rectangle canvas 
+canvas_w = 72*5
+canvas_h = 72*5
+saved_emoji_cloud_name = 'emoji_cloud_circle.png'
+EmojiCloud.plot_ellipse_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, saved_emoji_cloud_name)
+```
+
+<p float="left">
+    <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_circle.png" height="140" />
+</p>
+
+
+**All the above testing scripts and data are available at https://github.com/YunheFeng/EmojiCloud/tree/main/tests.**
+
 ## Authors
 
 Contributors names and contact info
@@ -99,4 +147,15 @@ See the LICENSE.md file for details
 
 ## Paper
 
-Our paper has been accepted at the 5th International Workshop on Emoji Understanding and Applications in Social Media ([EMOJI@NAACL 2022](https://aiisc.ai/emoji2022/)). More information will be available soon. 
+Our [paper](https://yunhefeng.me/material/EmojiCloud.pdf) has been accepted at the 5th International Workshop on Emoji Understanding and Applications in Social Media ([EMOJI@NAACL 2022](https://aiisc.ai/emoji2022/)). Online EmojiCloud services will be available soon at [www.emojicloud.org](www.emojicloud.org). 
+
+## Citations
+
+```bibtex
+@inproceedings{feng2022emojicloud,
+  title={EmojiCloud: a Tool for Emoji Cloud Visualization},
+  author={Feng, Yunhe and Guo, Cheng and Wen, Bingbing and Sun, Peng and Yue, Yufei and Tao, Dingwen},
+  booktitle={The 5th International Workshop on Emoji Understanding and Applications in Social Media at 2022 Annual Conference of the North American Chapter of the Association for Computational Linguistics (EMOJI@NAACL)},
+  year={2022}
+}
+```
