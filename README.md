@@ -110,7 +110,6 @@ EmojiCloud.plot_rectangle_canvas(canvas_w, canvas_h, emoji_vendor, dict_weight, 
     <img src="https://github.com/YunheFeng/EmojiCloud/blob/main/tests/test_results/emoji_cloud_original.png" height="100" />
 </p>
 
-<<<<<<< HEAD
 
 * **Plot customized emojis**
 ```Python 
